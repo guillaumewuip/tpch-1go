@@ -1,0 +1,9 @@
+load data
+INFILE '/tpch-dbgen/nation.tbl'
+INTO TABLE NATION
+APPEND
+FIELDS TERMINATED BY '|'
+( N_NATIONKEY,
+ N_NAME,
+ N_REGIONKEY,
+ N_COMMENT)
