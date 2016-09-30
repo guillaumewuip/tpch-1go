@@ -1,4 +1,5 @@
 -- Sccsid:     @(#)dss.ddl	2.1.8.1
+
 CREATE TABLE NATION  ( N_NATIONKEY  INTEGER NOT NULL,
                             N_NAME       CHAR(25) NOT NULL,
                             N_REGIONKEY  INTEGER NOT NULL,
@@ -67,4 +68,7 @@ CREATE TABLE LINEITEM ( L_ORDERKEY    INTEGER NOT NULL,
                              L_SHIPINSTRUCT CHAR(25) NOT NULL,
                              L_SHIPMODE     CHAR(10) NOT NULL,
                              L_COMMENT      VARCHAR(44) NOT NULL);
+
+ALTER DATABASE DATAFILE '/u01/app/oracle/oradata/XE/system.dbf'
+    AUTOEXTEND ON NEXT 1M MAXSIZE 2048M;
 
